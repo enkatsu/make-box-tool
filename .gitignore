@@ -1,6 +1,4 @@
 /dist
-
-/src/sketches/*
 !/**/.gitkeep
 
 node_modules
