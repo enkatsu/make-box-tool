@@ -4,14 +4,12 @@ function setup() {
   background(255);
 
   const n = 5;
-  const rectSize = width / (2 + 1.5 * n);
-  const interval = rectSize / 2;
-  rectMode(CENTER);
+  const squareSize = width / (4 + 3 * (n - 1)) * 2;
+  const interval = squareSize / 2;
 
-  for (let y = interval + rectSize / 2; y < height; y += interval + rectSize) {
-    for (let x = interval + rectSize / 2; x < width; x += interval + rectSize) {
-      square(x, y, rectSize);
-      // circle(x, y, rectSize);
+  for (let y = interval; y < height; y += interval + squareSize) {
+    for (let x = interval; x < width; x += interval + squareSize) {
+      square(x, y, squareSize);
     }
   }
 }
